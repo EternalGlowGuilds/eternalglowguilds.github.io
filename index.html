@@ -75,7 +75,7 @@ window.onclick = function(event) {
 #myBtn {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
+  bottom: /*20*/ 45px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
@@ -89,7 +89,7 @@ window.onclick = function(event) {
 }
 
 #myBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+  background-color: /*#555*/ darkred; /* Add a dark-grey background on hover */
 }
 </style>
 <script>
@@ -116,14 +116,21 @@ function topFunction() {
 <!--end of back to top btn-->
 
 
-
+<!--quick style for <a>-->
+<style>
+a {
+text-decoration: none;
+color: white;
+}
+</style>
+<!--end of quick style for <a>-->
 
 
 
 </head>
 	<body id="page-top" style="background: url('//eternalglowguilds.github.io/background/bg1.png'); background-size: cover;">
     
-      <a href="/contact.html" style="text-decoration: none;">    <div style="background-color:red;text-align:center;padding:10px;margin-top:7px;font-size:12px;color: black;">This website is still a work in progress, so some pages might not be available.</div></a>
+      <a href="/contact.html" style="text-decoration: none;">    <div style="background-color:red;text-align:center;padding:10px;margin-top:7px;font-size:12px;color: black;">This website is still a work in progress, so some pages might not be available. If you need to access a page, please click here to contact us.</div></a>
     
 		<!-- Navigation-->
 		<nav class="navbar navbar-expand-lg navbar-dark top-nav" id="mainNav">
@@ -139,10 +146,11 @@ function topFunction() {
   <a href="/glist">Guild List</a>
   <a href="/about">About</a>
   <a href="/contact">Contact</a>
-  <a href="/announcements">Announcements</a>
-  <a href="/news">Newsletter</a>
+  <a href="/subscribe">Subscribe</a>
   <a href="/cinfo">Copyright Info</a>
   <a href="/menu">All Pages</a>
+  <hr />
+<p style="font-size: 20px;">&nbsp;&nbsp;&nbsp;Need more pages to show? Click on &nbsp;&nbsp;&nbsp;the search bar on the homepage &nbsp;&nbsp;&nbsp;for all the pages!</p>
 </div>
 
 
@@ -239,8 +247,8 @@ function closeNav() {
 						<li class="nav-item "><a class="nav-link " href="/glist">Guild List</a></li>
 						<li class="nav-item "><a class="nav-link " href="/about">About</a></li>
 						<li class="nav-item "><a class="nav-link " href="/contact">Contact</a></li>
-						<li class="nav-item "><a class="nav-link " href="/announcements">Announcements</a></li>
-						<li class="nav-item "><a class="nav-link " href="/news">Newsletter</a></li>
+						<li class="nav-item "><a class="nav-link " href="/subscribe">Subscribe</a>
+                        <li class="nav-item "><a class="nav-link " href="/latest">Latest</a>
             
 
   
@@ -248,9 +256,11 @@ function closeNav() {
         
 
 
-            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> &#10247;</a>
-              <ul role="menu" class="dropdown-menu">
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">More pages &#10247;</a>
+            <ul role="menu" class="dropdown-menu">
                 <li><a class="dropdown-item" href="/cinfo">Copyright Info</a></li>
+                
+                <p style="color:white;background-color:purple;"><b> Tip: </b>Not finding what your looking for? Click on the search bar and look through <b>more</b> of the pages!</p>
                <!-- <li><a class="dropdown-item" href="/populargames">Popular Games</a></li>
                 <li><a class="dropdown-item" href="/games/category/cargames">Car Games</a></li>
                 <li><a class="dropdown-item" href="/games/category/adventure">Adventure Games</a></li>
@@ -349,7 +359,7 @@ function closeNav() {
         }
     </style>
 <center>
-<div id="showPopupButton"><input type="text" class="#myInput" placeholder="Search" title="Type in a page name or names, etc, etc..."></div>
+<div id="showPopupButton"><input type="none" class="#myInput" placeholder="Click here to search" title="Type in a page name or names, etc, etc..."></div>
 </center><br/>
 <div id="popup">
     <div id="popupContent">
@@ -412,8 +422,8 @@ function closeNav() {
   <li><a href="/glist">Guild List</a></li>
   <li><a href="/about">About Us</a><!--<a href="/about/nbt">- NothingButTyler (Owner)</a><a href="/about/snw">- xxsnowixx (formerly euphoria) (Co Owner)</a><a href="/about/yko">- Yukio (Admin/Mod)</a>--></li>
   <li><a href="/contact">Contact Us</a></li>
-  <li><a href="/announcements">Announcements</a></li>
-  <li><a href="/news">Newsletter</a></li>
+  <li><a href="/subscribe">Subscribe (announcements, newsletters, and calendar events)</a></li>
+  <li><a href="/latest">Latest Posts</a></li>
   <li><a href="/cinfo">Copyright Information</a></li>
 <li><a href="/privacy">Privacy Policy</a></li>
 <li><a href="/tac">Terms and Conditions</a></li>
@@ -466,10 +476,11 @@ function myFunction() {
 <h1>Ever wanted that comfortable server with barely any mentions and guilds?</h1></font>
 <p><center>Well, you found it! Eternal Glow Guilds is the place for you!</center></p><font color="white">
 <hr />
-
+<a href="/join"><button class="button-29">Join!</button></a>
+<a href="/sub"><button class="button-29">Subscribe</button></a>
 <hr />
 <h3>Looking for that server with a variety of guilds?</h3>
-<p>Valodoka is the #1 site for <!---->games and educational games<!----><!--educational games and unblocked games-->.</p>
+<p>We have a variety of over 500 guilds! That's a lot.</p>
 
 <hr />
 <!--Information - the number 1 site for games and edu games-->
@@ -1250,14 +1261,26 @@ function myFunction() {
 
 
 
+<!--plugins-->
 
+<!--accessibility menu-->
+<script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+<!--end of accessibility menu-->
 
+<!--language translate-->
 
+<div class="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right","switcher_open_direction":"top","alt_flags":{"en":"usa"},"switcher_text_color":"#f7f7f7","switcher_arrow_color":"#f2f2f2","switcher_border_color":"#161616","switcher_background_color":"#303030","switcher_background_shadow_color":"#474747","switcher_background_hover_color":"#3a3a3a","dropdown_text_color":"#eaeaea","dropdown_hover_color":"#748393","dropdown_background_color":"#474747"}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script>
+
+<!--end of language translate-->
+
+<!--end of plugins-->
 
 	<div class="footer-copyright py-4">
 		<div class="container">
 		<p><img src="https://eternalglowguilds.github.io/icon/EternalGlowGuildsLogo.jpg" title="Eternal Glow Guilds" alt="Eternal Glow Guilds logo" height="30" width="30"> 	Eternal Glow Guilds			</p><span class="dsb-panel">
-				<a href="term.html">Term</a> - <a href="dmca.html">DMCA</a> - <a href="policy.html">Policy</a>			</span>
+				<a href="terms">Terms</a> - <a href="dmca">DMCA</a> - <a href="policy">Policy</a>			</span>
 		</div>
 	</div>
 	<script type="text/javascript" src="//gamesuperhot.github.io/js/jquery-3.6.2.min.js"></script>
